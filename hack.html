@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emergency Alert System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: lightgray;
+      }
+      .alert {
+        display: block;
+        width: 500px;
+        margin: 0 auto;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+      }
+      .details {
+        display: block;
+        width: 500px;
+        margin: 20px auto;
+        text-align: left;
+      }
+      .details label {
+        display: inline-block;
+        width: 150px;
+        font-size: 16px;
+      }
+      .details span {
+        display: inline-block;
+        width: 300px;
+        font-size: 16px;
+      }
+      .button {
+        display: block;
+        width: 150px;
+        margin: 20px auto;
+        background-color: green;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Emergency Alert System</h1>
+    <div class="alert">An emergency alert has been received!</div>
+    <div class="details">
+      <label>Location:Highway101</label>
+      <span id="location"></span>
+    </div>
+    <div class="details">
+      <label>Description:Accident </label>
+      <span id="description"></span>
+    </div>
+    <div class="button" onclick="acknowledgeAlert()">Acknowledge Alert</div>
+    <script>
+      function acknowledgeAlert() {
+        document.querySelector(".alert").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
