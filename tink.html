@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vehicle Accident Emergency Alert System</title>
+    <style>
+      /* Add some style to the page */
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+          sans-serif;
+
+        text-align: center;
+        background-color: lightgray;
+      }
+      .alert {
+        display: block;
+        width: 500px;
+        margin: 0 auto;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+      }
+      .input {
+        display: block;
+        width: 500px;
+        margin: 20px auto;
+        text-align: left;
+      }
+      .input label {
+        display: inline-block;
+        width: 150px;
+        font-size: 20px;
+      }
+      .input input {
+        display: inline-block;
+        width: 300px;
+        font-size: 20px;
+        padding: 5px;
+      }
+      .button {
+        display: block;
+        width: 150px;
+        margin: 20px auto;
+        background-color: green;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vehicle Accident Emergency Alert System</h1>
+    <div class="alert" style="display: none">
+      An emergency alert has been sent to the authorities.
+    </div>
+    <div class="input">
+      <label for="location">Location:</label>
+      <input type="text" id="location" />
+    </div>
+    <div class="input">
+      <label for="description">Description:</label>
+      <input type="text" id="description" />
+    </div>
+    <div class="button" onclick="sendEmergencyAlert()">
+      Send Emergency Alert
+    </div>
+    <script>
+      function sendEmergencyAlert() {
+        // Get the location and description from the input fields
+        var location = document.getElementById("location").value;
+        var description = document.getElementById("description").value;
+
+        // Send the emergency alert to the authorities
+        // This could be done using an AJAX request to a server-side script
+        // or by using a JavaScript library like Socket.IO to send the data to a server in real-time
+        // The details of how to send the data will depend on your specific implementation
+
+        // Show the alert message to the user
+        document.querySelector(".alert").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
